@@ -5,6 +5,9 @@
 #pragma comment (lib, "ToastedMarshmellow.lib")
 #define GDHM_API __declspec(dllimport)
 
+#ifdef IMGUI_VERSION
+struct ImVec2;
+#else
 struct ImVec2
 {
 	float x, y;
@@ -13,13 +16,14 @@ struct ImVec2
 		x = y = 0.f;
 	}
 	ImVec2(
-		float _x, 
+		float _x,
 		float _y)
-	{ 
-		x = _x; 
-		y = _y; 
+	{
+		x = _x;
+		y = _y;
 	}
 };
+#endif // IMGUI_VERSION
 
 namespace GDHM
 {
