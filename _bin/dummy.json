@@ -1,0 +1,32 @@
+{
+    "TMGDMOD": [
+        {
+            "name": "Test 1",
+            "description": "GDHM API 1",
+            "toggle": true,
+            "hotkey": 0,
+            "opcodes": [
+                {
+                    "on": "EB 37",
+                    "off": "8A 80",
+                    "address": "0x20A1DD",
+                    "lib": ""
+                }
+            ]
+        },
+        {
+            "name": "Test 2",
+            "description": "GDHM API 2",
+            "toggle": false,
+            "hotkey": 0,
+            "opcodes": [
+                {
+                    "on": "EB 37",
+                    "off": "8A 80",
+                    "address": "0x20A1DD",
+                    "lib": ""
+                }
+            ]
+        }
+    ]
+}
