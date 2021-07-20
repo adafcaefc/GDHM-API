@@ -94,9 +94,9 @@ DWORD WINAPI _dll_main(LPVOID lpParam)
 	if (GDHM::is_gdhm_loaded())
 	{
 		// Example of normal window
-		GDHM::add_mod_window(3.f, "GDHM API Demo", "", _main_callback, _header, _footer, 0.f, 400.f);
+		GDHM::add_mod_window("GDHM API Demo", 3.f, "", _main_callback, _header, _footer, 0.f, 400.f);
 		// Example of mod window
-		GDHM::add_mod_window(4.f, "GDHM API Mod Demo", "dummy.json");
+		GDHM::add_mod_window("GDHM API Mod Demo", 4.f, "dummy.json");
 	}
 	else
 	{
