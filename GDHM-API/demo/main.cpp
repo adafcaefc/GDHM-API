@@ -87,7 +87,7 @@ void _header()
 
 	// Example of drag float
 	static float _drag_test = 1.f;
-	gdhm::drag_float(&_drag_test);
+	gdhm::add_drag_float(&_drag_test);
 	if (gdhm::last_item_just_released())
 	{
 		MessageBoxA(NULL, std::to_string(_drag_test).c_str(), "The value is", NULL);

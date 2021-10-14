@@ -48,8 +48,7 @@ namespace gdhm
 		char* buffer,
 		const size_t buffer_size,
 		const char* tag = nullptr);
-	// drag_float will be changed to add_drag_float on version above v32.62
-	GDHM_API void drag_float(
+	GDHM_API void add_drag_float(
 		float* value,
 		const float v_speed = 1.0f,
 		const float v_min = 0.0f,
@@ -57,7 +56,7 @@ namespace gdhm
 		const char* label_format = "%.3f",
 		const char* tag = nullptr,
 		void* on_release = nullptr);
-	GDHM_API void drag_float(
+	GDHM_API void add_drag_float(
 		const char* label,
 		float* value,
 		const float v_speed = 1.0f,
