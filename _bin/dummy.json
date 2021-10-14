@@ -1,5 +1,9 @@
 {
-    "TMGDMOD": [
+    "data": {
+        "name": "api.dummy",
+        "version": 1
+    },
+    "mods": [
         {
             "name": "Test 1",
             "description": "GDHM API 1",
