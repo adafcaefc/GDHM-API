@@ -59,6 +59,7 @@
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
     <IncludePath>$(SolutionDir)\includes;$(IncludePath)</IncludePath>
+    <OutDir>D:\SteamLibrary\steamapps\common\Geometry Dash\.GDHM\api</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
