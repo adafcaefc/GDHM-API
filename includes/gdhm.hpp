@@ -53,7 +53,7 @@ namespace gdhm
 
 	#if GDHM_API_IMPL != 1
 
-	inline const auto new_id = (static_cast<int>((std::hash<std::string>{}(__TIME__) + __COUNTER__) + 0xADAF));
+	inline const auto new_id = static_cast<int>((std::hash<std::string>{}(__TIME__) + __COUNTER__) + 0xADAF);
 	
 	namespace gui
 	{
