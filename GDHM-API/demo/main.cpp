@@ -35,7 +35,7 @@ void _footer()
 	gdhm::gui::label("");
 	
 	// Example of adding buttons using variables
-	static std::uint8_t button_1_key = 0;
+	std::uint8_t button_1_key = 0;
 	gdhm::gui::button(
 		gdhm_new_id(),
 		"Button 1",
@@ -51,7 +51,7 @@ void _footer()
 		callback_2);
 
 	// Example of adding buttons using struct without info
-	static gdhm::control button_3("Button 3");
+	gdhm::control button_3("Button 3");
 	gdhm::gui::button(
 		gdhm_new_id(),
 		&button_3,
@@ -71,7 +71,7 @@ void _header()
 	gdhm::gui::label(gdhm::get_version().c_str());
 	gdhm::gui::label("");
 
-	static gdhm::control button_1("Test Button");
+	gdhm::control button_1("Test Button");
 	// Example of button
 	gdhm::gui::button(
 		gdhm_new_id(),
@@ -80,7 +80,7 @@ void _header()
 		[]() { MessageBoxA(NULL, "Hello!", "A button", NULL); });
 
 	// Example of checkbox
-	static bool _checkbox_value = false;
+	bool _checkbox_value = false;
 	gdhm::gui::checkbox(
 		gdhm_new_id(), 
 		"Test Checkbox", 
@@ -89,7 +89,7 @@ void _header()
 		[]() { MessageBoxA(NULL, _checkbox_value ? "True" : "False", "The value is", NULL); });
 
 	// Example of checkbox without callback
-	static bool _checkbox_value_2 = false;
+	bool _checkbox_value_2 = false;
 	gdhm::gui::checkbox(
 		gdhm_new_id(),
 		"Test Checkbox 2",
@@ -98,7 +98,7 @@ void _header()
 	gdhm::gui::label("");
 
 	// Example of text box
-	static char _text_box[10];
+	char _text_box[10];
 	gdhm::gui::input_text(
 		gdhm_new_id(),
 		_text_box, 
@@ -107,7 +107,7 @@ void _header()
 	gdhm::gui::label("");
 
 	// Example of drag float
-	static float _drag_test = 1.f;
+	float _drag_test = 1.f;
 	gdhm::gui::input_float(
 		gdhm_new_id(), 
 		&_drag_test,
