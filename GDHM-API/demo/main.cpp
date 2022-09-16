@@ -37,7 +37,7 @@ void _footer()
 	// Example of adding buttons using variables
 	std::uint8_t button_1_key = 0;
 	gdhm::gui::button(
-		gdhm_new_id(),
+		gdhm::new_id,
 		"Button 1",
 		&button_1_key,
 		callback_1,
@@ -46,14 +46,14 @@ void _footer()
 	// Example of adding buttons using struct with info
 	static gdhm::control button_2("Button 2", "Number two info.");
 	gdhm::gui::button(
-		gdhm_new_id(),
+		gdhm::new_id),
 		&button_2,
 		callback_2);
 
 	// Example of adding buttons using struct without info
 	gdhm::control button_3("Button 3");
 	gdhm::gui::button(
-		gdhm_new_id(),
+		gdhm::new_id,
 		&button_3,
 		callback_3);
 	gdhm::gui::label("");
@@ -74,7 +74,7 @@ void _header()
 	gdhm::control button_1("Test Button");
 	// Example of button
 	gdhm::gui::button(
-		gdhm_new_id(),
+		gdhm::new_id,
 		"Test Button",
 		nullptr, // no hotkey option is applied by passing nullptr to the hotkey option
 		[]() { MessageBoxA(NULL, "Hello!", "A button", NULL); });
@@ -82,7 +82,7 @@ void _header()
 	// Example of checkbox
 	bool _checkbox_value = false;
 	gdhm::gui::checkbox(
-		gdhm_new_id(), 
+		gdhm::new_id, 
 		"Test Checkbox", 
 		&_checkbox_value, 
 		nullptr, // no hotkey option is applied by passing nullptr to the hotkey option
@@ -91,7 +91,7 @@ void _header()
 	// Example of checkbox without callback
 	bool _checkbox_value_2 = false;
 	gdhm::gui::checkbox(
-		gdhm_new_id(),
+		gdhm::new_id,
 		"Test Checkbox 2",
 		&_checkbox_value_2);
 
@@ -100,7 +100,7 @@ void _header()
 	// Example of text box
 	char _text_box[10];
 	gdhm::gui::input_text(
-		gdhm_new_id(),
+		gdhm::new_id,
 		_text_box, 
 		sizeof(_text_box),
 		[]() { MessageBoxA(NULL, _text_box, "The value is", NULL); });
@@ -122,7 +122,7 @@ void _header()
 	static std::vector<std::string> items = { "Item 1", "Item 2", "Item 3" };
 	static std::uint8_t selected = NULL;
 	gdhm::gui::list_box(
-		gdhm_new_id(), 
+		gdhm::new_id, 
 		&selected, items, 
 		[&]() { MessageBoxA(NULL, items.at(selected).c_str(), "You selected", NULL); });
 	gdhm::gui::label("");
