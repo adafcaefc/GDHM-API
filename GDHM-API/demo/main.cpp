@@ -1,6 +1,6 @@
 #include <Windows.h>
 #include <string>
-#include <gdhm.h>
+#include <gdhm.hpp>
 
 static unsigned int my_counter = 0;
 void _main_callback()
