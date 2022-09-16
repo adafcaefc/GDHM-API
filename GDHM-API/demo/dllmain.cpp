@@ -7,14 +7,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 	switch (dwReason)
 	{
 	case DLL_PROCESS_ATTACH:
-		::DisableThreadLibraryCalls(hModule);
-		::CreateThread(nullptr, NULL, _dll_main, hModule, NULL, nullptr);
-		break;
-	case DLL_THREAD_ATTACH:
-		break;
-	case DLL_THREAD_DETACH:
-		break;
-	case DLL_PROCESS_DETACH:
+		DisableThreadLibraryCalls(hModule);
+		const HANDLE _dll_main_handle = CreateThread(nullptr, NULL, dll_main, hModule, NULL, nullptr);
+		if (_dll_main_handle != NULL) {
+			return CloseHandle(_dll_main_handle) != 0;
+		}
 		break;
 	}
 	return TRUE;
